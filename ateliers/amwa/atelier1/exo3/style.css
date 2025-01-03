@@ -1,0 +1,14 @@
+table {
+    width: 400px;
+    text-align: center;
+    border: solid 1px;
+    border-collapse: collapse;
+}
+
+table tr:nth-child(even) {
+    background-color: burlywood;
+}
+
+table tr:nth-child(odd) {
+    background-color: bisque;
+}

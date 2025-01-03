@@ -1,0 +1,12 @@
+input {
+    display: block;
+    margin: 15px;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+    transition: all .3s;
+}
+
+input:focus {
+    -webkit-box-shadow: 10px 10px 18px 5px #000000; 
+    box-shadow: 10px 10px 18px 5px #000000;
+}
