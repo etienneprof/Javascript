@@ -1,0 +1,69 @@
+h1 {
+    text-decoration: underline;
+}
+
+form {
+    width: 250px;
+    margin: auto;
+}
+
+form > * {
+    display: block;
+    width: 100%;
+}
+
+form > h2 {
+    text-align: center;
+}
+
+form > input[type=text], form > textarea {
+    width: calc(100% - 8px);
+}
+
+form > textarea {
+    height: 150px;
+    resize: none;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.note {
+    position: relative;
+    width: 400px;
+    height: 250px;
+
+    border-radius: 5px;
+
+    padding-left: 10px;
+    margin: 10px;
+}
+
+.close {
+    display: block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    padding-bottom: 1px;
+    padding-left: 1px;
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin: 0;
+    border-radius: 50%;
+
+    transition: all .3s;
+}
+
+.close:hover {
+    cursor: pointer;
+    transform: rotateZ(360deg);
+    background-color: rgba(0, 0, 0, .1);
+}
