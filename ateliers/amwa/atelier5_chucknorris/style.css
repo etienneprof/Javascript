@@ -1,0 +1,63 @@
+body {
+    background-color: #424242;
+    overflow: hidden;
+}
+
+#categories {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#categories > button {
+    flex: 1;
+    text-transform: capitalize;
+}
+
+#random_joke_button {
+    display: block;
+    margin: auto;
+}
+
+.joke_holder {
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: #cbcbcb;
+    padding: 40px;
+    border: solid 2px;
+    border-color: white #e2e2e2 #e2e2e2 white;
+    border-radius: 10px;
+
+    text-align: center;
+
+    transition: all .3s;
+
+    animation-duration: .2s;
+}
+
+@keyframes popin {
+    from {
+        margin-left: -60%;
+        opacity: -1;
+    }
+
+    to {
+        margin-left: 0%;
+        opacity: 1;
+    }
+}
+
+@keyframes popout {
+    from {
+        margin-left: 0%;
+        opacity: 1;
+    }
+
+    to {
+        margin-left: 60%;
+        opacity: -1;
+    }
+}
