@@ -1,0 +1,14 @@
+
+
+textarea {
+    width: 650px;
+    height: 10em;
+}
+
+table {
+    width: 650px;
+}
+
+tr:nth-child(odd) {
+    background-color: lightgray;
+}

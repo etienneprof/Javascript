@@ -1,0 +1,19 @@
+div {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #979797;
+}
+
+div:first-of-type {
+    background-color: black;
+}
+
+span {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    visibility: hidden;
+}
