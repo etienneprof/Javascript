@@ -1,0 +1,27 @@
+[
+    {
+      "name": "Spider-Man",
+      "age": 25,
+      "special_power": "Superhuman strength, wall-crawling, spider-sense"
+    },
+    {
+      "name": "Wonder Woman",
+      "age": 3000,
+      "special_power": "Superhuman strength, flight, combat skills, healing factor"
+    },
+    {
+      "name": "Iron Man",
+      "age": 45,
+      "special_power": "Powered armor suit with advanced technology"
+    },
+    {
+      "name": "Black Panther",
+      "age": 35,
+      "special_power": "Enhanced strength, agility, senses, and healing, Vibranium suit"
+    },
+    {
+      "name": "The Flash",
+      "age": 30,
+      "special_power": "Super speed, time travel, vibrational frequency manipulation"
+    }
+]
