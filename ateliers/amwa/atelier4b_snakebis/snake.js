@@ -3,9 +3,8 @@ let position = {
     "x" : window.innerWidth / 2,
     "y" : window.innerHeight / 2
 }
-let speed = 5.0;
-let distance = 5;
-let snake_size = 3;
+let speed = 21;
+let snake_size = 4;
 
 let snake = [];
 let position_history = [];
@@ -20,33 +19,40 @@ window.addEventListener("keydown", changeDirection);
 
 setInterval(() => {
     let movement = {"x" : direction.x * speed, "y" : direction.y * speed};
-    if (position.x + movement.x > 0 && position.x + movement.x < (window.innerWidth - snake[0].offsetWidth)) {
-        position.x += movement.x;
-    } else {
-        gameOver();
+    position.x += movement.x;
+    position.y += movement.y;
+    if (position.x < 0) {
+        position.x = window.innerWidth - snake[0].offsetWidth;
     }
-    if (position.y + movement.y > 0 && position.y + movement.y < (window.innerHeight - snake[0].offsetHeight)) {
-        position.y += movement.y;
-    } else {
-        gameOver();
+
+    if (position.x > (window.innerWidth - snake[0].offsetWidth)) {
+        position.x = 0;
+    }
+
+    if (position.y < 0) {
+        position.y = window.innerHeight - snake[0].offsetHeight;
+    }
+
+    if (position.y > (window.innerHeight - snake[0].offsetHeight)) {
+        position.y = 0;
     }
     updatePosition();
     checkCollisionWithApple();
     checkCollisionWithTail();
-}, 1000/60);
+}, 1000/15);
 
 setTimeout(spawnApple, Math.random() * 1000 * 5);
 
 function updatePosition() {
     position_history.push({"x" : position.x, "y" : position.y});
-    snake[0].style.left = position.x + "px";
-    snake[0].style.top = position.y + "px";
-    for (let i = 1; i < snake_size; i++) {
-        if (position_history.length > i * distance) {
-            snake[i].style.left = position_history[position_history.length - distance * i].x + "px";
-            snake[i].style.top = position_history[position_history.length - distance * i].y + "px";
+    for (let i = 0; i < snake_size; i++) {
+        if (position_history.length > i) {
+            snake[i].style.left = position_history[position_history.length - i - 1].x + "px";
+            snake[i].style.top = position_history[position_history.length - i - 1].y + "px";
         }
     }
+
+    while (position_history.length > snake_size) position_history.shift();
 }
 
 function updateSize() {

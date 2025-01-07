@@ -14,11 +14,6 @@ body {
     text-transform: capitalize;
 }
 
-#random_joke_button {
-    display: block;
-    margin: auto;
-}
-
 .joke_holder {
     position: absolute;
     top: 33%;
@@ -36,6 +31,7 @@ body {
     transition: all .3s;
 
     animation-duration: .2s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes popin {

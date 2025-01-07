@@ -10,7 +10,7 @@ random_joke_button.addEventListener("click", crackRandomJoke);
 function loadCategories() {
     fetch("https://api.chucknorris.io/jokes/categories")
         .then(result => result.json())
-        .then(displayCategories);
+        .then(displayCategories); // .then(json => displayCategories(json));
 }
 
 function displayCategories(categories) {
